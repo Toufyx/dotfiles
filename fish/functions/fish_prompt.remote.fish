@@ -9,7 +9,7 @@ function fish_prompt
         set -g __arrow ""
     end
 
-    if not set -q $__fish_prompt_hostname
+    if not set -q __fish_prompt_hostname
         set -g __fish_prompt_hostname (hostname)
     end
 
