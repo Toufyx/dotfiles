@@ -1,4 +1,7 @@
-# /bin/bash
+# /bin/sh
+#
+# Install Docker on Debian System
+#
 
 apt-get update
 

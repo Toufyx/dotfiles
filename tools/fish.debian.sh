@@ -1,4 +1,7 @@
-# /bin/bash
+# /bin/sh
+#
+# Install Fish on Debian System
+#
 
 # install package
 apt-get install fish
