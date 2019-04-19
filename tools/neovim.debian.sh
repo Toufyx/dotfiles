@@ -1,4 +1,4 @@
-# /bin/sh
+#!/bin/sh
 #
 # Install Neovim on Debian System
 #

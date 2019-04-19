@@ -1,4 +1,4 @@
-# /bin/sh
+#!/bin/sh
 #
 # Install Docker on Debian System
 #

@@ -1,4 +1,4 @@
-# /bin/sh
+#!/bin/sh
 #
 # Install HomeBrew
 # See https://brew.sh/index_fr

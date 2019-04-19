@@ -1,4 +1,4 @@
-# /bin/sh
+#!/bin/sh
 #
 # Set up common Git Aliases
 # See https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases for more information
