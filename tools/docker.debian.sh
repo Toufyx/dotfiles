@@ -19,3 +19,7 @@ apt-get update
 
 # Install the latest version of Docker CE and containerd, or go to the next step to install a specific version:
 apt-get install docker-ce docker-ce-cli containerd.io
+
+# Install Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
+chmod +x /usr/bin/docker-compose
