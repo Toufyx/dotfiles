@@ -1,4 +1,6 @@
 {
+    "customizeUI.titleBar": "inline",
+    "customizeUI.activityBar": "wide",
     "runOnSave.statusMessageTimeout": 300,
     "runOnSave.commands": [
         {
@@ -36,8 +38,8 @@
         "-l 120"
     ],
     "python.sortImports.path": "isort",
-    "python.linting.pep8Enabled": true,
-    "python.linting.pep8Path": "/usr/local/bin/pycodestyle",
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pycodestylePath": "/usr/local/bin/pycodestyle",
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": "/usr/local/bin/flake8",
     "python.linting.pylintEnabled": false,
@@ -45,8 +47,8 @@
     "terminal.integrated.shell.osx": "/bin/zsh",
     "terminal.integrated.shellArgs.osx": [],
     "terminal.integrated.fontFamily": "Fira Code",
-    "window.nativeTabs": true,
     "window.titleBarStyle": "native",
+    "window.nativeTabs": false,
     "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
     "workbench.enableExperiments": false,
     "workbench.tree.indent": 18,
@@ -97,5 +99,6 @@
         "terminalCursor.foreground": "#AFAFAF",
     },
     "editor.renderWhitespace": "all",
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "window.zoomLevel": 0,
 }
