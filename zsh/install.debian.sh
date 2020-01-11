@@ -1,5 +1,7 @@
 #!/bin/sh
 
+SCRIPT_DIR="$(dirname "$0")"
+
 # install zsh packages
 apt-get install zsh
 
@@ -8,4 +10,4 @@ mkdir -p /root/bin
 curl -L git.io/antigen > /root/bin/antigen.zsh
 
 # deploy zshrc file
-cp config/zshrc.debian.root /root/.zshrc
+cp $SCRIPT_DIR/config/zshrc.debian.root /root/.zshrc

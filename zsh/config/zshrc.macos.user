@@ -16,6 +16,9 @@ export CLICOLOR=1
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
+# Use nvim as default EDITOR
+export EDITOR=nvim
+
 # History Configuration
 HISTSIZE=5000               #How many lines of history to keep in memory
 HISTFILE=~/.zsh_history     #Where to save history to disk
@@ -27,6 +30,8 @@ setopt    incappendhistory  #Immediately append to the history file, not just wh
 
 # Load Bundles
 source $HOME/Workspace/bin/antigen.zsh
+antigen use oh-my-zsh
+antigen bundle dotenv
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
