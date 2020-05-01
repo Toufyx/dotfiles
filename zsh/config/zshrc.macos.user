@@ -1,43 +1,55 @@
+#!/usr/bin/env zsh
+#    _________  _   _ ____   ____
+#   |__  / ___|| | | |  _ \ / ___|
+#     / /\___ \| |_| | |_) | |
+#  _ / /_ ___) |  _  |  _ <| |___
+# (_)____|____/|_| |_|_| \_\\____|
+#
 
-# Set up Unicode
+# set up unicode
 export LANG=en_US.UTF-8
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:/usr/local/bin:$HOME/Workspace/bin"
 
-# Set up custom PS1
+# set up custom PS1
 autoload -U colors && colors
 PS1="%{$fg[magenta]%}[%T]%{$reset_color%} %m %{$fg[yellow]%}%~ %{$reset_color%}$ "
 
-# Add colors to ls output
+# add colors to ls output
 export CLICOLOR=1
 
-# Simple Key Bindings
+# make docker-compose.local.yml be used before docker-compose.yml
+docker-compose() {
+    /usr/local/bin/docker-compose -f "$([[ -a docker-compose.local.yml ]] && echo 'docker-compose.local.yml' || echo 'docker-compose.yml')" $@
+}
+
+# simple key bindings
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
-# Use nvim as default EDITOR
+# use nvim as default EDITOR
 export EDITOR=nvim
 
-# History Configuration
-HISTSIZE=5000               #How many lines of history to keep in memory
-HISTFILE=~/.zsh_history     #Where to save history to disk
-SAVEHIST=5000               #Number of history entries to save to disk
-HISTDUP=erase               #Erase duplicates in the history file
-setopt    appendhistory     #Append history to the history file (no overwriting)
-setopt    sharehistory      #Share history across terminals
-setopt    incappendhistory  #Immediately append to the history file, not just when a term is killed
+# history configuration
+HISTSIZE=5000               # How many lines of history to keep in memory
+HISTFILE=~/.zsh_history     # Where to save history to disk
+SAVEHIST=5000               # Number of history entries to save to disk
+HISTDUP=erase               # Erase duplicates in the history file
+setopt appendhistory        # Append history to the history file (no overwriting)
+setopt sharehistory         # Share history across terminals
+setopt incappendhistory     # Immediately append to the history file, not just when a term is killed
 
 # autostart tmux session
 if command -v tmux &> /dev/null && [ -n "$PS1" ] \
-	&& [[ ! "$TERM" =~ screen ]] \
-	&& [[ ! "$TERM" =~ tmux ]] \
-	&& [ -z "$TMUX" ];
+    && [[ ! "$TERM" =~ screen ]] \
+    && [[ ! "$TERM" =~ tmux ]] \
+    && [ -z "$TMUX" ];
 then
-  exec tmux
+    exec tmux new-session \; split-window -v \; resize-pane -D 20 \; select-pane -t 1 \;
 fi
 
-# Load Bundles
+# load antigen bundles
 source $HOME/Workspace/bin/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle dotenv
