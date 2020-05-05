@@ -192,13 +192,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.81176470588235294</real>
+				<real>0.8929290771484375</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.81176470588235294</real>
+				<real>0.8929290771484375</real>
 				<key>Red Component</key>
-				<real>0.81176470588235294</real>
+				<real>0.8929290771484375</real>
 			</dict>
 			<key>Ansi 2 Color</key>
 			<dict>
@@ -990,7 +990,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>64A91841-C54E-4A61-8550-D8AAA868F12A</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>64</integer>
+	<integer>86</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1777,7 +1777,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-30T14:36:01Z</date>
+	<date>2020-05-05T08:44:59Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SmartPlacement</key>
