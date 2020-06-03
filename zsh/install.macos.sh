@@ -13,5 +13,5 @@ then
 fi
 
 # deploy zshrc file
-rm ~/.zshrc
+rm $HOME/.zshrc
 ln -s $SCRIPT_DIR/config/zshrc.macos.user $HOME/.zshrc
