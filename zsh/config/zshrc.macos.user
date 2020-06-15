@@ -14,15 +14,22 @@ export PATH="$PATH:/usr/local/bin:$HOME/Workspace/bin"
 
 # set up custom PS1
 autoload -U colors && colors
-PS1="%{$fg[magenta]%}[%T]%{$reset_color%} %m %{$fg[yellow]%}%~ %{$reset_color%}$ "
-
-# add colors to ls output
-export CLICOLOR=1
-
-# make docker-compose.local.yml be used before docker-compose.yml
-docker-compose() {
-    /usr/local/bin/docker-compose -f "$([[ -a docker-compose.local.yml ]] && echo 'docker-compose.local.yml' || echo 'docker-compose.yml')" $@
+GREEN_BG="%F{black}%K{green}"
+GREEN_FG="%F{green}%K{black}"
+YELLOW_BG="%F{black}%K{yellow}"
+YELLOW_FG="%F{yellow}%K{black}"
+BLUE_BG="%F{black}%K{cyan}"
+BLUE_FG="%F{cyan}%K{black}"
+RESET="%f%k"
+NEWLINE=$'\n'
+git_branch() {
+        branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/')
+        [[ -z "$branch" ]] || echo "$BLUE_FG$BLUE_BG $branch $BLUE_FG$RESET"
 }
+PROMPT='$NEWLINE$GREEN_BG %T $GREEN_FG$YELLOW_BG %m  %~ $YELLOW_FG$RESET$(git_branch)$NEWLINE$NEWLINE$ $RESET'
+
+# make sure things are pretty
+export CLICOLOR=1
 
 # simple key bindings
 bindkey "^[[1;3C" forward-word
