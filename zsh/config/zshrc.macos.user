@@ -47,15 +47,6 @@ setopt appendhistory        # Append history to the history file (no overwriting
 setopt sharehistory         # Share history across terminals
 setopt incappendhistory     # Immediately append to the history file, not just when a term is killed
 
-# autostart tmux session
-if command -v tmux &> /dev/null && [ -n "$PS1" ] \
-    && [[ ! "$TERM" =~ screen ]] \
-    && [[ ! "$TERM" =~ tmux ]] \
-    && [ -z "$TMUX" ];
-then
-    exec tmux
-fi
-
 # load antigen bundles
 source $HOME/Workspace/bin/antigen.zsh
 antigen use oh-my-zsh
@@ -63,3 +54,4 @@ antigen bundle dotenv
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
+
