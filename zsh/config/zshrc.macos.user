@@ -6,11 +6,19 @@
 # (_)____|____/|_| |_|_| \_\\____|
 #
 
+# set up aws config and connect
+export OKTA_USERNAME="thibault.defeyter@backmarket.com"
+export OKTA_MFA="Auto"
+alias aws-login="saml2aws --idp-account='default' login --skip-prompt"
+alias k=kubectl
+
 # set up unicode
 export LANG=en_US.UTF-8
 
-# add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# load personal and python tools
 export PATH="$PATH:/usr/local/bin:$HOME/Workspace/bin"
+export PATH="$HOME/.poetry/bin:$PATH"
+eval "$(pyenv init -)"
 
 # set up custom PS1
 autoload -U colors && colors
