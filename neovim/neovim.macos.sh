@@ -10,6 +10,6 @@ SCRIPT_DIR=`realpath "$(dirname "$0")"`
 brew install neovim
 
 # deploy neovim configuration file
-mkdir -p $HOME/.config/nvim/
-rm $HOME/.config/nvim/init.vim
-ln -s $SCRIPT_DIR/config/init.vim $HOME/.config/nvim/init.vim
+mkdir -p $HOME/.config/
+rm -rf $HOME/.config/nvim
+ln -s $SCRIPT_DIR/config $HOME/.config/nvim
