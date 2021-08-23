@@ -5,9 +5,9 @@ Plug 'nvim-lua/plenary.nvim' " lua dependency
 Plug 'nvim-telescope/telescope.nvim' " fuzzy finder
 Plug 'kyazdani42/nvim-web-devicons' " file icons
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " syntax tree
+Plug 'neovim/nvim-lspconfig' " add LSP server
+Plug 'glepnir/lspsaga.nvim' " UI enhancements for LSP config
 Plug 'vim-airline/vim-airline' " vim status line
-Plug 'dense-analysis/ale' " adynchronous lint engine
-Plug 'airblade/vim-gitgutter' " git information
 Plug 'vimjas/vim-python-pep8-indent' " python auto indentation
 
 call plug#end()
