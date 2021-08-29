@@ -6,6 +6,10 @@
 
 SCRIPT_DIR=`realpath "$(dirname "$0")"`
 
+# install dependencies
+brew install pyright
+brew install efm-langserver
+
 # install neovim
 brew install neovim
 
