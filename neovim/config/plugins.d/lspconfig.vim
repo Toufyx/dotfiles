@@ -21,7 +21,7 @@ lspconfig.pyright.setup {
 -- set up efm to run python linters and formatters
 lspconfig.efm.setup {
   on_attach = on_attach_format,
-  cmd = { 'efm-langserver', '-logfile', '/tmp/efm.log', '-loglevel', '5' },
+  cmd = { 'efm-langserver' },
   init_options = { documentFormatting = true },
   filetypes = { "python" },
   settings = {
