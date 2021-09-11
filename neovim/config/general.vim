@@ -18,3 +18,10 @@ let g:loaded_python_provider=0
 
 " setup colorscheme
 colorscheme gruvbox
+
+" make tabs 4 chars instead of 8
+set tabstop=4
+
+" show hidden characters
+set list
+set listchars=tab:→\ ,space:·
