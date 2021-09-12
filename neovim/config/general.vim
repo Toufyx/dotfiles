@@ -25,3 +25,9 @@ set tabstop=4
 " show hidden characters
 set list
 set listchars=tab:→\ ,space:·
+
+" use gruvbox colors for lsp diagnostics
+highlight link LspDiagnosticsDefaultError GruvboxRed
+highlight link LspDiagnosticsDefaultWarning GruvboxYellow
+highlight link LspDiagnosticsDefaultInformation GruvboxBlue
+highlight link LspDiagnosticsDefaultHint GruvboxGreen
