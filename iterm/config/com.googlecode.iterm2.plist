@@ -1304,13 +1304,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.18431372940540314</real>
+				<real>0.18431372549019609</real>
 				<key>Color Space</key>
-				<string>Calibrated</string>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.74117648601531982</real>
+				<real>0.74117647058823533</real>
 				<key>Red Component</key>
-				<real>0.98039215803146362</real>
+				<real>0.98039215686274506</real>
 			</dict>
 			<key>Ansi 12 Color</key>
 			<dict>
@@ -2066,7 +2066,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FiraMonoNerdFontCompleteM-Regular 11</string>
+			<string>FiraCodeNerdFont-Retina 11</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2140,7 +2140,7 @@
 			<key>Use Non-ASCII Font</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1</real>
+			<real>1.1499999999999999</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -2201,9 +2201,9 @@
 	<key>TabViewType</key>
 	<integer>1</integer>
 	<key>TerminalMargin</key>
-	<integer>0</integer>
+	<integer>5</integer>
 	<key>TerminalVMargin</key>
-	<integer>0</integer>
+	<integer>8</integer>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
