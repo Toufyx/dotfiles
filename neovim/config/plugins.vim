@@ -9,7 +9,8 @@ Plug 'neovim/nvim-lspconfig' " add LSP server
 Plug 'glepnir/lspsaga.nvim' " UI enhancements for LSP config
 Plug 'vim-airline/vim-airline' " vim status line
 Plug 'vimjas/vim-python-pep8-indent' " python auto indentation
-Plug 'lewis6991/gitsigns.nvim' " super fast git decorations implemented purely in lua/teal.
+Plug 'lewis6991/gitsigns.nvim' " super fast git decorations implemented purely in lua/teal
+Plug 'nvim-lua/completion-nvim' " an auto completion framework
 
 call plug#end()
 

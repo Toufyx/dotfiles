@@ -1,5 +1,6 @@
 lua << EOF
 local lspconfig = require('lspconfig')
+local completion = require('completion')
 
 local on_attach_format = function(client, bufnr)
   if client.resolved_capabilities.document_formatting then
@@ -10,9 +11,13 @@ local on_attach_format = function(client, bufnr)
   end
 end
 
+local on_attach_completion = function(client, bufnr)
+  completion.on_attach()
+end
+
 -- set up pyright
 lspconfig.pyright.setup {
-  on_attach = on_attach_format,
+  on_attach = on_attach_completion,
   handlers = {
     ["textDocument/publishDiagnostics"] = function() end
   }
@@ -60,4 +65,9 @@ lspconfig.efm.setup {
     }
   }
 }
+
+vim.lsp.diagnostic.show_line_diagnostics()
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = false }
+)
 EOF

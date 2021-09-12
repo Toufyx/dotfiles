@@ -7,5 +7,7 @@ nnoremap <leader>b <cmd>Telescope buffers<cr>
 " lsp config
 nnoremap <silent>gd <Cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent>K <Cmd>Lspsaga hover_doc<CR>
-inoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
-
+nnoremap <silent>D <Cmd>Lspsaga show_line_diagnostics<CR>
+nnoremap <silent>N <Cmd>Lspsaga diagnostic_jump_next<CR>
+nnoremap <silent>P <Cmd>Lspsaga diagnostic_jump_prev<CR>
+nnoremap <silent>R <Cmd>Lspsaga rename<CR>
