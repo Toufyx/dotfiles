@@ -41,6 +41,14 @@ lspconfig.efm.setup {
           lintFormats = { '%f:%l:%c:%m' },
         },
         {
+          lintCommand = 'poetry run mypy --show-column-numbers',
+          lintFormats = {
+            '%f:%l:%c: %trror: %m',
+            '%f:%l:%c: %tarning: %m',
+            '%f:%l:%c: %tote: %m'
+          },
+        },
+        {
           formatCommand = 'black --quiet -',
           formatStdin = true
         },
