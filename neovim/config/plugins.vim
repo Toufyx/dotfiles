@@ -2,7 +2,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'morhetz/gruvbox' " gruvbox color scheme
 Plug 'nvim-lua/plenary.nvim' " lua dependency
-Plug 'nvim-telescope/telescope.nvim' " fuzzy finder
 Plug 'kyazdani42/nvim-web-devicons' " file icons
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " syntax tree
 Plug 'neovim/nvim-lspconfig' " add LSP server
