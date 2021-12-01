@@ -1,3 +1,8 @@
+" set up tabs per file type
+autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType css setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab
+
 " setup terminal true colors
 set termguicolors
 

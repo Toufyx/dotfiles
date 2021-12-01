@@ -28,10 +28,25 @@ lspconfig.efm.setup {
   on_attach = on_attach_format,
   cmd = { 'efm-langserver' },
   init_options = { documentFormatting = true },
-  filetypes = { "python" },
+  filetypes = { "python", "javascript" },
   settings = {
     rootMarkers = { ".git/", "pyproject.toml" },
     languages = {
+      javascript = {
+        {
+          formatCommand = 'prettier --stdin-filepath ${INPUT}',
+          formatStdin = true,
+        },
+        {
+          lintCommand = 'eslint --stdin --stdin-filename ${INPUT} -f visualstudio',
+          lintStdin = true,
+          lintFormats = {
+            "%f(%l,%c): %tarning %m",
+            "%f(%l,%c): %rror %m",
+          },
+          lintIgnoreExitCode = true,
+        },
+      },
       python = {
         {
           lintCommand = 'pylint --output-format text --score no --msg-template "{path}:{line}:{column}:{C}:[pylint] {msg} [{msg_id}]" ${INPUT}',
