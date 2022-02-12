@@ -18,11 +18,30 @@ local function stylua()
   }
 end
 
+-- black
+local function black()
+  return {
+    exe = 'black',
+    args = { '--quiet', '-' },
+    stdin = true,
+  }
+end
+
+-- isort
+local function isort()
+  return {
+    exe = 'isort',
+    args = { '--quiet', '-' },
+    stdin = true,
+  }
+end
+
 -- setup languages formatter
 formatter.setup({
   filetype = {
     vue = { prettier },
     lua = { stylua },
+    python = { black, isort },
   },
 })
 

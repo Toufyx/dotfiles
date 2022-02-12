@@ -16,3 +16,6 @@ lspconfig.sumneko_lua.setup({
     },
   },
 })
+
+-- configure python LSP
+lspconfig.pyright.setup({})
