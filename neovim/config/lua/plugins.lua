@@ -19,4 +19,8 @@ Plug('mhartington/formatter.nvim')
 Plug('mfussenegger/nvim-lint')
 Plug('neovim/nvim-lspconfig')
 
+-- git decorations
+Plug('lewis6991/gitsigns.nvim')
+
+
 vim.call('plug#end')
