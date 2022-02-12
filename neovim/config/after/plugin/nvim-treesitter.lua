@@ -8,6 +8,7 @@ treesiter.setup({
     'lua',
     'python',
     'toml',
+    'vue',
     'yaml',
   },
   textobjects = {

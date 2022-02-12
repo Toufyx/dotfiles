@@ -1,6 +1,6 @@
 local formatter = require('formatter')
 
--- prettier definition
+-- prettier
 local function prettier()
   return {
     exe = 'prettier',
@@ -9,7 +9,7 @@ local function prettier()
   }
 end
 
--- stylua definition
+-- stylua
 local function stylua()
   return {
     exe = 'stylua',
@@ -39,6 +39,8 @@ end
 -- setup languages formatter
 formatter.setup({
   filetype = {
+    json = { prettier },
+    javascript = { prettier },
     vue = { prettier },
     lua = { stylua },
     python = { black, isort },
