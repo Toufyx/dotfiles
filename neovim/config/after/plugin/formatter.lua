@@ -50,5 +50,5 @@ formatter.setup({
 -- setup format on save
 vim.api.nvim_command('augroup FormatAutogroup')
 vim.api.nvim_command('autocmd!')
-vim.api.nvim_command('autocmd BufWritePost * FormatWrite')
+vim.api.nvim_command('autocmd BufWritePost json, javascript, vue, lua, python FormatWrite')
 vim.api.nvim_command('augroup END')
