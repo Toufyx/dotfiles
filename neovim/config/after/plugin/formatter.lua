@@ -39,16 +39,17 @@ end
 -- setup languages formatter
 formatter.setup({
   filetype = {
-    json = { prettier },
+    css = { prettier },
+    html = { prettier },
     javascript = { prettier },
-    vue = { prettier },
+    javascriptreact = { prettier },
+    json = { prettier },
     lua = { stylua },
     python = { black, isort },
+    vue = { prettier },
   },
 })
 
 -- setup format on save
-vim.api.nvim_command('augroup FormatAutogroup')
-vim.api.nvim_command('autocmd!')
-vim.api.nvim_command('autocmd BufWritePost json, javascript, vue, lua, python FormatWrite')
-vim.api.nvim_command('augroup END')
+local format_autogroup = vim.api.nvim_create_augroup('FormatAutogroup', { clear = true })
+vim.api.nvim_create_autocmd('BufWritePost', { command = 'FormatWrite', group = format_autogroup })

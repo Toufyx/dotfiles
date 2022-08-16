@@ -14,12 +14,25 @@ Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug('nvim-treesitter/nvim-treesitter-textobjects')
 
--- neovim native LSP client and additional linter/formatter manager
+-- neovim native LSP client
+Plug('neovim/nvim-lspconfig')
+
+-- additional linter/formatter to integrate with native LSP client
 Plug('mhartington/formatter.nvim')
 Plug('mfussenegger/nvim-lint')
-Plug('neovim/nvim-lspconfig')
+
+-- completion management
+Plug('hrsh7th/cmp-vsnip')
+Plug('hrsh7th/vim-vsnip')
+Plug('hrsh7th/cmp-nvim-lsp')
+Plug('hrsh7th/cmp-buffer')
+Plug('hrsh7th/cmp-path')
+Plug('hrsh7th/nvim-cmp')
 
 -- git decorations
 Plug('lewis6991/gitsigns.nvim')
+
+-- highly extendable fuzzy finder over lists
+Plug('nvim-telescope/telescope.nvim')
 
 vim.call('plug#end')

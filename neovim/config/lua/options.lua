@@ -1,5 +1,5 @@
 -- setup essentials running configuration
-vim.g.python3_host_prog = '$HOME/.nvimenv/bin/python3'
+vim.g.python3_host_prog = '$HOME/Workspace/git/kornelia-backend/.venv/bin/python3'
 vim.g.python3_host_skip_check = 1
 vim.g.loaded_python_provider = 0
 vim.g.bulitin_lsp = true

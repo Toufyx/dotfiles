@@ -11,3 +11,6 @@ require('plugins')
 
 -- load options
 require('options')
+
+-- load key mappings
+require('mappings')
