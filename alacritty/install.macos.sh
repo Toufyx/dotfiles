@@ -1,12 +1,12 @@
 #!/bin/sh
 #
 # Install Alacritty on MacOS System
-# 
-# expect Alacritty to already be installed
-# this will just link the confg file
 #
 
 SCRIPT_DIR=`realpath "$(dirname "$0")"`
+
+# install alacritty program
+brew install --cask alacritty
 
 # deploy alacritty configuration file
 mkdir -p $HOME/.config/alacritty/
