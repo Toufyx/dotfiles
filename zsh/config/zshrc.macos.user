@@ -6,9 +6,6 @@
 # (_)____|____/|_| |_|_| \_\\____|
 #
 
-# load brew shell environment
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 # set up unicode
 export LANG=en_US.UTF-8
 
