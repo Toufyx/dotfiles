@@ -30,7 +30,7 @@ git_branch() {
     branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/')
     [[ -z "$branch" ]] || echo "%F{black}%K{yellow}%F{black}%K{yellow} $branch %F{yellow}%K{black}$RESET"
 }
-PROMPT='$NEWLINE%F{black}%K{cyan} %T %F{cyan}%K{black}%F{black}%K{white} %~ %F{white}%K{black}$(git_branch)$NEWLINE$NEWLINE$RESET$ '
+PROMPT='$NEWLINE%F{black}%K{blue} %T %F{blue}%K{black}%F{black}%K{white} %~ %F{white}%K{black}$(git_branch)$NEWLINE$NEWLINE$RESET$ '
 
 # make sure things are pretty
 export CLICOLOR=1
