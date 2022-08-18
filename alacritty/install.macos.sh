@@ -9,6 +9,6 @@ SCRIPT_DIR=`realpath "$(dirname "$0")"`
 brew install --cask alacritty
 
 # deploy alacritty configuration file
-mkdir -p $HOME/.config/alacritty/
+mkdir -p $HOME/.config/
 rm -rf $HOME/.config/alacritty/
 ln -s $SCRIPT_DIR/config $HOME/.config/alacritty
