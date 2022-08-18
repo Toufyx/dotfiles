@@ -7,8 +7,10 @@
 # install GNU File, Shell, and Text utilities
 brew install coreutils
 
-# install yython version management
+# install python tools
 brew install pyenv
+brew install isort black flake8
+brew install poetry
 
 # WGET is not part of the mac os standard lib ... and yet so powerful !
 brew install wget
