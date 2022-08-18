@@ -4,6 +4,12 @@
 # Required HomeBrew Installation
 #
 
+# install GNU File, Shell, and Text utilities
+brew install coreutils
+
+# install yython version management
+brew install pyenv
+
 # WGET is not part of the mac os standard lib ... and yet so powerful !
 brew install wget
 
