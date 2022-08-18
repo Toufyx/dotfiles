@@ -47,16 +47,16 @@ font:
   # Font faces
   normal:
     family: FiraCode Nerd Font Mono
-    style: Regular
+    style: Light
   bold:
     family: FiraCode Nerd Font Mono
-    style: Bold
+    style: Regular
   italic:
     family: FiraCode Nerd Font Mono
-    style: Italic
+    style: Light Italic
   bold_italic:
     family: FiraCode Nerd Font Mono
-    style: Bold Italic
+    style: Italic
 
   # Point size
   size: 13
@@ -66,7 +66,7 @@ font:
   # spacing.
   offset:
     x: 0
-    y: 3
+    y: 4
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
