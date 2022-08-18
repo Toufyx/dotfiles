@@ -32,7 +32,8 @@ PROMPT='$NEWLINE%F{black}%K{blue} %T %F{blue}%K{black}%F{black}%K{white} %
 # make sure things are pretty
 export CLICOLOR=1
 
-# simple key bindings
+# simple key bindings to make alt-arrow work as expected
+bindkey -e
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
