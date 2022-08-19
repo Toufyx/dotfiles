@@ -16,7 +16,7 @@ vim.o.number = true
 
 -- setup gruvbox theme
 vim.o.background = 'dark'
-vim.opt.termguicolors = true
+vim.o.termguicolors = true
 vim.g.gruvbox_invert_selection = 0
 vim.cmd('colorscheme gruvbox')
 
