@@ -19,6 +19,9 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
+# configure dotenv
+export ZSH_DOTENV_PROMPT=false
+
 # set up custom PS1
 autoload -U colors && colors
 RESET="%f%k"
