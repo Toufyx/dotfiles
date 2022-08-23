@@ -8,7 +8,7 @@ Plug('nvim-lua/plenary.nvim')
 Plug('morhetz/gruvbox')
 
 -- status line
-Plug('nvim-lualine/lualine.nvim')
+Plug('feline-nvim/feline.nvim')
 
 -- generic abstract syntax tree manager, mainly used for awesome color schemes
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })

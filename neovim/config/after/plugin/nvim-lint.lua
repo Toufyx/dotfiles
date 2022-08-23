@@ -2,7 +2,6 @@ local lint = require('lint')
 
 -- setup linters
 lint.linters_by_ft = {
-  vue = { 'eslint' },
   javascriptreact = { 'eslint' },
   python = { 'mypy', 'flake8' },
 }
