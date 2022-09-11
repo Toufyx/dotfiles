@@ -12,11 +12,11 @@ local RIGHT = 2
 -- vi mode color configuration
 local MODE_COLORS = {
   ['NORMAL'] = 'green',
-  ['COMMAND'] = 'skyblue',
+  ['COMMAND'] = 'violet',
   ['INSERT'] = 'orange',
   ['REPLACE'] = 'red',
-  ['LINES'] = 'violet',
-  ['VISUAL'] = 'violet',
+  ['LINES'] = 'blue',
+  ['VISUAL'] = 'blue',
   ['OP'] = 'yellow',
   ['BLOCK'] = 'yellow',
   ['V-REPLACE'] = 'yellow',
@@ -28,22 +28,22 @@ local MODE_COLORS = {
   ['NONE'] = 'yellow',
 }
 
--- gruvbox theme
-local GRUVBOX = {
-  fg = '#ebdbb2',
-  bg = '#3c3836',
-  black = '#3c3836',
-  skyblue = '#83a598',
-  cyan = '#8e07c',
-  green = '#b8bb26',
-  oceanblue = '#076678',
-  blue = '#458588',
-  magenta = '#d3869b',
-  orange = '#d65d0e',
-  red = '#fb4934',
-  violet = '#b16286',
-  white = '#ebdbb2',
-  yellow = '#fabd2f',
+-- feline color theme
+local COLORS = {
+  fg = '#B0BFBC',
+  bg = '#141929',
+  black = '#141929',
+  skyblue = '#459EA6',
+  cyan = '#A1D0C8',
+  green = '#88B073',
+  oceanblue = '#0B398E',
+  blue = '#04628B',
+  magenta = '#93588F',
+  orange = '#DB7E57',
+  red = '#CF3709',
+  violet = '#B38BC3',
+  white = '#B0BFBC',
+  yellow = '#DBB956',
 }
 
 --
@@ -51,7 +51,7 @@ local GRUVBOX = {
 --
 
 --- get the current buffer's file name, defaults to '[no name]'
-function get_filename()
+local function get_filename()
   local filename = vim.api.nvim_buf_get_name(0)
   if filename == '' then
     filename = '[no name]'
@@ -63,7 +63,7 @@ function get_filename()
 end
 
 --- get the current buffer's file type, defaults to '[not type]'
-function get_filetype()
+local function get_filetype()
   local filetype = vim.bo.filetype
   if filetype == '' then
     filetype = '[no type]'
@@ -72,37 +72,37 @@ function get_filetype()
 end
 
 --- get the cursor's line
-function get_line_cursor()
+local function get_line_cursor()
   local cursor_line, _ = unpack(vim.api.nvim_win_get_cursor(0))
   return cursor_line
 end
 
 --- get the file's total number of lines
-function get_line_total()
+local function get_line_total()
   return vim.api.nvim_buf_line_count(0)
 end
 
 --- wrap a string with whitespaces
-function wrap(string)
+local function wrap(string)
   return ' ' .. string .. ' '
 end
 
 --- wrap a string with whitespaces and add a '' on the left,
 -- use on left section components for a nice  transition
-function wrap_left(string)
+local function wrap_left(string)
   return ' ' .. string .. ' '
 end
 
 --- wrap a string with whitespaces and add a '' on the right,
 -- use on left section components for a nice  transition
-function wrap_right(string)
+local function wrap_right(string)
   return ' ' .. string .. ' '
 end
 
 --- decorate a provider with a wrapper function
 -- the provider must conform to signature: (component, opts) -> string
 -- the wrapper must conform to the signature: (string) -> string
-function wrapped_provider(provider, wrapper)
+local function wrapped_provider(provider, wrapper)
   return function(component, opts)
     return wrapper(provider(component, opts))
   end
@@ -113,22 +113,22 @@ end
 --
 
 --- provide the vim mode (NOMRAL, INSERT, etc.)
-function provide_mode(component, opts)
+local function provide_mode(component, opts)
   return vi_mode.get_vim_mode()
 end
 
 --- provide the buffer's file name
-function provide_filename(component, opts)
+local function provide_filename(component, opts)
   return get_filename()
 end
 
 --- provide the line's information (curosor position and file's total lines)
-function provide_linenumber(component, opts)
+local function provide_linenumber(component, opts)
   return get_line_cursor() .. '/' .. get_line_total()
 end
 
 -- provide the buffer's file type
-function provide_filetype(component, opts)
+local function provide_filetype(component, opts)
   return get_filetype()
 end
 
@@ -213,7 +213,7 @@ table.insert(components.inactive[LEFT], {
 --
 
 feline.setup({
-  theme = GRUVBOX,
+  theme = COLORS,
   components = components,
   vi_mode_colors = MODE_COLORS,
 })

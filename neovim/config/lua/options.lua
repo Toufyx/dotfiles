@@ -1,5 +1,5 @@
 -- setup essentials running configuration
-vim.g.python3_host_prog = os.getenv("PYTHON_HOST_PROG")
+vim.g.python3_host_prog = os.getenv('PYTHON_HOST_PROG')
 vim.g.python3_host_skip_check = 1
 vim.g.loaded_python_provider = 0
 vim.g.bulitin_lsp = true
@@ -7,18 +7,13 @@ vim.g.bulitin_lsp = true
 -- setup cursor aspects
 vim.o.guicursor = 'i:hor10-blinkwait300-blinkon200-blinkoff150'
 
--- setup line length limits
-vim.o.colorcolumn = '80,120'
-vim.highlight.create('ColorColumn', { ctermbg = 8 }, false)
-
 -- setup line numbers
 vim.o.number = true
 
--- setup gruvbox theme
+-- setup colors
 vim.o.background = 'dark'
 vim.o.termguicolors = true
-vim.g.gruvbox_invert_selection = 0
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme main')
 
 -- setup tab default behaviour
 vim.o.expandtab = true

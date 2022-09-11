@@ -4,9 +4,6 @@ vim.call('plug#begin', '~/.local/share/nvim/plugged')
 -- lua base dependency
 Plug('nvim-lua/plenary.nvim')
 
--- gruvbox colors scheme
-Plug('morhetz/gruvbox')
-
 -- status line
 Plug('feline-nvim/feline.nvim')
 
