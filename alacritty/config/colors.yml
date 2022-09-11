@@ -1,8 +1,7 @@
 colors:
-  # Default colors
   primary:
-    background: '#282828'
-    foreground: '#ebdbb2'
+    background: '#060A17'
+    foreground: '#B0BFBC'
 
   # Colors which should be used to draw the terminal cursor.
   # Allowed values are CellForeground/CellBackground, which reference the
@@ -11,58 +10,24 @@ colors:
     text: CellBackground
     cursor: CellForeground
 
-  # Search colors
-  # Colors used for the search bar and match highlighting.
-  search:
-    # Allowed values are CellForeground/CellBackground, which reference the
-    # affected cell, or hexadecimal colors like #ff00ff.
-    bar:
-      foreground: '#282828'
-      background: '#d79921'
-    matches:
-      foreground: '#282828'
-      background: '#d79921'
-    focused_match:
-      foreground: '#282828'
-      background: '#d79921'
-
-  # Color used for the indicator displaying the position in history during
-  # search and vi mode.
-  line_indicator:
-    foreground: '#282828'
-    background: '#d79921'
-
-  # Color used for the footer bar on the bottom, used by search regex input,
-  # hyperlink URI preview, etc.
-  footer_bar:
-    background: '#282828'
-    foreground: '#d79921'
-
-  # Colors which should be used to draw the selection area.
-  # Allowed values are CellForeground/CellBackground, which reference the
-  # affected cell, or hexadecimal colors like #ff00ff.
-  selection:
-    text: '#d5c4a1'
-    background: '#504945'
-
   # Normal colors
   normal:
-    black:   '#282828'
-    red:     '#fb4934'
-    green:   '#b8bb26'
-    yellow:  '#d79921'
-    blue:    '#83a598'
-    magenta: '#d3869b'
-    cyan:    '#8ec07c'
-    white:   '#ebdbb2'
+    black:   '#060A17'
+    red:     '#CF3709'
+    green:   '#72892F'
+    yellow:  '#F8990D'
+    blue:    '#0B398E'
+    magenta: '#93588F'
+    cyan:    '#459EA6'
+    white:   '#5E7173'
 
   # Bright colors
   bright:
-    black:   '#3c3836'
-    red:     '#fb4934'
-    green:   '#b8bb26'
-    yellow:  '#fabd2f'
-    blue:    '#83a598'
-    magenta: '#d3869b'
-    cyan:    '#8ec07c'
-    white:   '#fbf1c7'
+    black:   '#141929'
+    red:     '#DB7E57'
+    green:   '#88B073'
+    yellow:  '#DBB956'
+    blue:    '#04628B'
+    magenta: '#B38BC3'
+    cyan:    '#A1D0C8'
+    white:   '#B0BFBC'
