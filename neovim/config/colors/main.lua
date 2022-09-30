@@ -16,9 +16,11 @@ local colors = {
   color013 = '#B38BC3',
   color014 = '#A1D0C8',
   color015 = '#B0BFBC',
+  none = 'none',
 }
 
 local function highlight(group, args)
+  vim.cmd('highlight clear ' .. group)
   local command = 'highlight! ' .. group
   if args.fg then
     command = command .. ' guifg=' .. args.fg
@@ -41,7 +43,7 @@ vim.cmd('syntax reset')
 -- interface colors
 highlight('LineNr', { fg = colors.color008 })
 highlight('CursorLineNr', { fg = colors.color007 })
-highlight('CursorLine', { fg = 'none', bg = 'none' })
+highlight('CursorLine', { fg = colors.none, bg = colors.none })
 highlight('Error', { fg = colors.color000, bg = colors.color001 })
 highlight('ErrorMsg', { fg = colors.color000, bg = colors.color001 })
 highlight('DiagnosticError', { fg = colors.color001 })
@@ -52,10 +54,10 @@ highlight('PmenuSel', { fg = colors.color000, bg = colors.color015 })
 highlight('MatchParen', { fg = colors.color015, bg = colors.color012 })
 highlight('Visual', { fg = colors.color015, bg = colors.color012 })
 highlight('NonText', { fg = colors.color015 })
-highlight('DiffAdd', { fg = colors.color002, bg = 'none' })
-highlight('DiffDelete', { fg = colors.color001, bg = 'none' })
-highlight('DiffChange', { fg = colors.color003, bg = 'none' })
-highlight('SignColumn', { fg = colors.color015, bg = 'none' })
+highlight('DiffAdd', { fg = colors.color002 })
+highlight('DiffDelete', { fg = colors.color001 })
+highlight('DiffChange', { fg = colors.color003 })
+highlight('SignColumn', { fg = colors.color015 })
 
 -- code colors
 highlight('Normal', { fg = colors.color015 })
@@ -69,3 +71,5 @@ highlight('Statement', { fg = colors.color006 })
 highlight('SpecialKey', { fg = colors.color015 })
 highlight('Special', { fg = colors.color015 })
 highlight('Type', { fg = colors.color010 })
+highlight('Title', { fg = colors.color015 })
+highlight('VertSplit', { fg = colors.color015 })
