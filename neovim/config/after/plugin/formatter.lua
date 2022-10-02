@@ -1,5 +1,14 @@
 local formatter = require('formatter')
 
+-- yamlfmt
+local function yamlfmt()
+  return {
+    exe = 'yamlfmt -in /dev/stdin',
+    args = {},
+    stdin = true,
+  }
+end
+
 -- prettier
 local function prettier()
   return {
@@ -47,6 +56,7 @@ formatter.setup({
     lua = { stylua },
     python = { black, isort },
     vue = { prettier },
+    yaml = { yamlfmt },
   },
 })
 
