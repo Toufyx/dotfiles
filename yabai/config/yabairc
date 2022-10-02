@@ -1,0 +1,9 @@
+# Layout defines whether windows are tiled ("managed", "bsp") by yabai or left alone ("float")
+yabai -m config layout stack
+
+# Set all padding and gaps to 24pt (default: 0)
+yabai -m config top_padding    24
+yabai -m config bottom_padding 24
+yabai -m config left_padding   24
+yabai -m config right_padding  24
+yabai -m config window_gap     24
