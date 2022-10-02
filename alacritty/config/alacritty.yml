@@ -7,92 +7,72 @@
 import:
   - ~/.config/alacritty/colors.yml
   - ~/.config/alacritty/bindings.yml
-
 env:
   TERM: alacritty
-
 window:
   # Number of lines/columns (not pixels) in the terminal.
   dimensions:
     columns: 178
     lines: 48
-
   # Window position specified in number of pixels.
   position:
     x: 30
     y: 102
-
   # Blank space added around the window in pixels.
   padding:
     x: 8
     y: 8
-
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: true
-
   # Values for `decorations`:
   # - full: Borders and title bar
   # - none: Neither borders nor title bar
   # - transparent: Title bar, transparent background and title bar buttons
   # - buttonless: Title bar, transparent background and no title bar buttons
   decorations: none
-
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.93
-
+  opacity: 0.9
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   history: 10000
-
   # Scrolling distance multiplier.
   multiplier: 3
-
 # Font configuration
 font:
-
   # Font faces
   normal:
     family: Hasklug Nerd Font Mono
     style: Regular
-
   bold:
     family: Hasklug Nerd Font Mono
     style: Semibold
-  
   italic:
     family: Hasklug Nerd Font Mono
     style: Light Italic
-  
   bold_italic:
     family: Hasklug Nerd Font Mono
     style: Italic
-
   # Point size
   size: 14
-
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
   offset:
     x: 0
     y: 1
-
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
   # right, increasing `y` moves the glyph upward.
   glyph_offset:
     x: 0
     y: 1
-
   # Thin strokes are suitable for retina displays, but for non-retina screens
   # it is recommended to set `use_thin_strokes` to `false`.
   use_thin_strokes: true
-
   # If `true`, Alacritty will use a custom built-in font for box drawing
   # characters (Unicode points 2500 - 259f).
   builtin_box_drawing: true
-
 # Bell
 # The bell is rung every time the BEL control character is received.
 bell:
@@ -109,22 +89,17 @@ bell:
   #   - EaseOutCirc
   #   - Linear
   animation: Ease
-
   # Duration of the visual bell flash in milliseconds. A `duration` of `0` will
   # disable the visual bell animation.
   duration: 100
-
   # Visual bell animation color.
   color: '#3c3638'
-
 selection:
   # This string contains all characters that are used as separators for
   # "semantic words" in Alacritty.
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
-
   # When set to `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: true
-
 cursor:
   style:
     # Values for `shape`:
@@ -132,10 +107,8 @@ cursor:
     # - _ Underline
     # - | Beam
     shape: Block
-
 # Send ESC (\x1b) before characters when alt is pressed.
 alt_send_esc: false
-
 # Terminal hints can be used to find text in the visible part of the terminal
 # and pipe it to other applications.
 hints:
