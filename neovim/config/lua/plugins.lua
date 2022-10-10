@@ -10,6 +10,7 @@ Plug('feline-nvim/feline.nvim')
 -- generic abstract syntax tree manager, mainly used for awesome color schemes
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug('nvim-treesitter/nvim-treesitter-textobjects')
+Plug('nvim-treesitter/playground')
 
 -- neovim native LSP client
 Plug('neovim/nvim-lspconfig')

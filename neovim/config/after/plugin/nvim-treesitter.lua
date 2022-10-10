@@ -11,6 +11,11 @@ treesiter.setup({
     'vue',
     'yaml',
   },
+  playground = {
+    enable = true,
+    disable = {},
+    persist_queries = false,
+  },
   textobjects = {
     select = {
       enable = true,

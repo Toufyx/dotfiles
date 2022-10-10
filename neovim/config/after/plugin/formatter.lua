@@ -13,7 +13,7 @@ end
 local function prettier()
   return {
     exe = 'prettier',
-    args = { '--stdin-filepath', vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)) },
+    args = { '--plugin-search-dir=./', '--stdin-filepath', vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)) },
     stdin = true,
   }
 end
@@ -52,6 +52,8 @@ formatter.setup({
     html = { prettier },
     javascript = { prettier },
     javascriptreact = { prettier },
+    typescript = { prettier },
+    typescriptreact = { prettier },
     json = { prettier },
     lua = { stylua },
     python = { black, isort },

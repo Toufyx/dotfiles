@@ -42,3 +42,9 @@ lspconfig.pyright.setup({
     },
   },
 })
+
+--
+-- TYPESCRIPT LSP CONFIG
+--
+
+lspconfig.tsserver.setup({})
