@@ -1,3 +1,6 @@
+# Float system preferences
+yabai -m rule --add app="^System Preferences$" manage=off
+
 # Layout defines whether windows are tiled ("managed", "bsp") by yabai or left alone ("float")
 yabai -m config layout stack
 
