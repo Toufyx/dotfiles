@@ -48,8 +48,8 @@ vim.cmd('highlight! clear')
 vim.cmd('syntax reset')
 
 -- interface colors
-highlight('LineNr', { fg = colors.color008 })
-highlight('CursorLineNr', { fg = colors.color007 })
+highlight('LineNr', { fg = colors.color007 })
+highlight('CursorLineNr', { fg = colors.color005 })
 highlight('CursorLine', { fg = colors.none, bg = colors.none })
 highlight('Error', { fg = colors.color000, bg = colors.color001 })
 highlight('ErrorMsg', { fg = colors.color000, bg = colors.color001 })
@@ -70,9 +70,8 @@ highlight('EndOfBuffer', { fg = colors.color015 })
 
 -- syntax group
 -- descriptions and ordering from ':h w18'
-
 highlight('Comment', { fg = colors.color007 })
-highlight('Constant', { fg = colors.color009 })
+highlight('Constant', { fg = colors.color015 })
 highlight('String', { fg = colors.color009 })
 highlight('Character', { fg = colors.color009 })
 highlight('Number', { fg = colors.color009 })
@@ -106,14 +105,16 @@ highlight('Ignore', { fg = colors.color015 })
 highlight('Error', { fg = colors.color001 })
 highlight('Todo', { fg = colors.color000, bg = colors.color003 })
 highlight('Normal', { fg = colors.color015 })
+highlight('Title', { fg = colors.color013 })
 
--- typescript specifics
+-- tsx specifics
 highlight('tsxEscJs', { fg = colors.color013 })
 highlight('tsxTag', { fg = colors.color005 })
 link('tsxIntrinsicTagName', 'tsxTag')
 link('tsxCloseTag', 'tsxTag')
 link('tsxTagName', 'tsxTag')
 
+-- typescript specifics
 highlight('typescriptDefault', { fg = colors.color015 })
 link('typescriptTypeReference', 'Type')
 link('typescriptBraces', 'Normal')

@@ -72,14 +72,15 @@ local function get_filetype()
 end
 
 --- get the cursor's line
-local function get_line_cursor()
+local function get_cursor_line()
   local cursor_line, _ = unpack(vim.api.nvim_win_get_cursor(0))
   return cursor_line
 end
 
 --- get the file's total number of lines
-local function get_line_total()
-  return vim.api.nvim_buf_line_count(0)
+local function get_cursor_column()
+  local _, cursor_column = unpack(vim.api.nvim_win_get_cursor(0))
+  return cursor_column
 end
 
 --- wrap a string with whitespaces
@@ -124,7 +125,7 @@ end
 
 --- provide the line's information (curosor position and file's total lines)
 local function provide_linenumber(component, opts)
-  return get_line_cursor() .. '/' .. get_line_total()
+  return get_cursor_line() .. ':' .. get_cursor_column()
 end
 
 -- provide the buffer's file type
