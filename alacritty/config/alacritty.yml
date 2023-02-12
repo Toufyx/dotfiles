@@ -32,7 +32,7 @@ window:
   decorations: none
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.9
+  opacity: 1
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   history: 10000
