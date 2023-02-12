@@ -6,6 +6,7 @@
 	br = branch
 	ci = commit
 	st = status
+	sw = switch
 [color]
 	ui = true
 [core]
