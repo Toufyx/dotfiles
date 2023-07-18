@@ -28,9 +28,9 @@ RESET="%f%k"
 NEWLINE=$'\n'
 git_branch() {
     branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/')
-    [[ -z "$branch" ]] || echo "%F{006}%F{000}%K{006} $branch %F{006}%K{000}%f%k"
+    [[ -z "$branch" ]] || echo "%F{004}%F{000}%K{004} $branch %F{004}%k%f%k"
 }
-PROMPT='$NEWLINE%F{000}%K{003} %T %k%F{003}%F{011}%F{000}%K{011} %~ %k%F{011}$(git_branch)$RESET$NEWLINE$NEWLINE$ '
+PROMPT='$NEWLINE%F{000}%K{003} %T %k%F{003}%F{010}%F{000}%K{010} %~ %k%F{010}$(git_branch)$RESET$NEWLINE$NEWLINE$ '
 
 # make sure things are pretty
 export CLICOLOR=1

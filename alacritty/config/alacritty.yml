@@ -5,7 +5,7 @@
 # will be replaced. All imports must either be absolute paths starting with `/`,
 # or paths relative to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/colors.yml
+  - ~/.config/alacritty/catppuccin.yml
   - ~/.config/alacritty/bindings.yml
 env:
   TERM: alacritty
