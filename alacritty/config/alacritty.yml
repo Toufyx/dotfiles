@@ -42,16 +42,16 @@ scrolling:
 font:
   # Font faces
   normal:
-    family: Hasklug Nerd Font Mono
+    family: FiraMono Nerd Font Propo
     style: Regular
   bold:
-    family: Hasklug Nerd Font Mono
+    family: FiraMono Nerd Font Propo
     style: Semibold
   italic:
-    family: Hasklug Nerd Font Mono
+    family: FiraMono Nerd Font Propo
     style: Light Italic
   bold_italic:
-    family: Hasklug Nerd Font Mono
+    family: FiraMono Nerd Font Propo
     style: Italic
   # Point size
   size: 14
