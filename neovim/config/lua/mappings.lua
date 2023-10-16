@@ -1,22 +1,18 @@
-local map = vim.api.nvim_set_keymap
-local opts = { noremap=true, silent=true }
+------------------------------------------------------------------------
+--                     keymapping configuration                       --
+------------------------------------------------------------------------
+local keymap = vim.keymap
+local lsp = vim.lsp
 
--- telescope key bindings
-map("n", "ff", "<cmd> Telescope find_files <CR>", opts)
-map("n", "fg", "<cmd> Telescope live_grep <CR>", opts)
-map("n", "fb", "<cmd> Telescope buffers <CR>", opts)
+-- nvim tree shortcuts
+keymap.set('n', '<C-n>', '<Cmd>NvimTreeToggle<CR>', { silent = true })
 
--- formatter key bindings
-map("n", "f", "<cmd> Format <CR>", opts)
+-- telescope shortcuts
+local telescope = require('telescope.builtin')
+keymap.set('n', '<leader>ff', telescope.find_files, {})
+keymap.set('n', '<leader>fg', telescope.live_grep, {})
+keymap.set('n', '<leader>fb', telescope.buffers, {})
+keymap.set('n', '<leader>fh', telescope.help_tags, {})
 
 -- lsp key bindings
-map("n", "gd","<cmd> lua vim.lsp.buf.definition() <CR>", opts)
-
--- netrw key bindings
-map("n", "ls", "<cmd> Lexplore %:p:h <CR>", opts)
-
--- pane navigation bindings
--- NB. Â stands for <A-z>
--- see: https://github.com/alacritty/alacritty/issues/4048#issuecomment-665970148
-map('n', 'Â', '<C-w>', opts)
-map('n', 'ÂÂ', '<C-w><C-w>', opts)
+keymap.set('n', 'gd', lsp.buf.definition, {})

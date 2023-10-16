@@ -1,16 +1,18 @@
--- ascii art generated from https://patorjk.com/software/taag/#p=display&f=Stop&t=init.lua
---  _       _        _
--- (_)     (_)_     | |
---  _ ____  _| |_   | |_   _  ____
--- | |  _ \| |  _)  | | | | |/ _  |
--- | | | | | | |__ _| | |_| ( ( | |
--- |_|_| |_|_|\___|_)_|\____|\_||_|
+------------------------------------------------------------------------
+--                      configuration entrypoint                      --
+------------------------------------------------------------------------
 
--- load plugind
-require('plugins')
+-- list all the core configuration files
+local core_configuration_files = {
+  'plugins.lua', -- all the plugins installed and their configurations
+  'globals.lua', -- some global settings
+  'mappings.lua', -- all the user-defined mappings
+  'highlights.lua', -- all the user-defined highlights
+}
 
--- load options
-require('options')
-
--- load key mappings
-require('mappings')
+-- source all the core configuration files
+for _, configuration_file in ipairs(core_configuration_files) do
+  local module, _ = string.gsub(configuration_file, '%.lua', '')
+  package.loaded[module] = nil
+  require(module)
+end
