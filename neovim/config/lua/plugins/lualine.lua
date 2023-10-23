@@ -123,12 +123,12 @@ require('lualine').setup({
       {
         get_lsp_clients,
         separator = { left = '' },
-        color = { fg = colors.base, bg = colors.teal },
+        color = { fg = colors.base, bg = colors.yellow },
       },
       {
         get_filetype,
         separator = { left = '' },
-        color = { fg = colors.base, bg = colors.sapphire },
+        color = { fg = colors.base, bg = colors.teal },
       },
     },
 
