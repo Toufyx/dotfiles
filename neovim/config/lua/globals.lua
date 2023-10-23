@@ -51,3 +51,25 @@ vim.o.signcolumn = 'yes'
 
 -- share clipboard with system
 vim.opt.clipboard:append({ 'unnamed', 'unnamedplus' })
+
+-- change diagnostic display
+vim.diagnostic.config({
+  virtual_text = false,
+  signs = true,
+  update_in_insert = true,
+  underline = true,
+  severity_sort = false,
+  float = {
+    border = 'rounded',
+    source = 'always',
+    header = '',
+    prefix = ' ',
+    suffix = ' ',
+  },
+})
+vim.cmd([[
+autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
+]])
+vim.opt.completeopt = { 'menuone', 'noselect', 'noinsert' }
+vim.opt.shortmess = vim.opt.shortmess + { c = true }
+vim.api.nvim_set_option('updatetime', 0)
