@@ -110,6 +110,15 @@ local lazy_plugins = {
     end,
   },
 
+  -- a smooth scrolling plugin
+  {
+    'karb94/neoscroll.nvim',
+    event = 'VeryLazy',
+    config = function()
+      require('plugins.neoscroll')
+    end,
+  },
+
   -- telescope
   {
     'nvim-telescope/telescope.nvim',
