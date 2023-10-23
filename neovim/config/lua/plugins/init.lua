@@ -46,6 +46,15 @@ local lazy_plugins = {
     end,
   },
 
+  -- smart and powerful commenting
+  {
+    'numToStr/Comment.nvim',
+    lazy = false,
+    config = function()
+      require('plugins.comment')
+    end,
+  },
+
   -- fancy start screen
   {
     'nvimdev/dashboard-nvim',
