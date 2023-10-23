@@ -5,7 +5,7 @@ local cmp = require('cmp')
 cmp.setup({
   snippet = {
     expand = function(args)
-      vim.fn['vsnip#anonymous'](args.body)
+      require('luasnip').lsp_expand(args.body)
     end,
   },
   mapping = cmp.mapping.preset.insert({
@@ -29,7 +29,5 @@ cmp.setup({
   }),
   sources = {
     { name = 'nvim_lsp' }, -- For nvim-lsp
-    { name = 'path' }, -- for path completion
-    { name = 'buffer' }, -- for buffer word completion
   },
 })

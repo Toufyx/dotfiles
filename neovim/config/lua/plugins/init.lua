@@ -36,10 +36,6 @@ local lazy_plugins = {
     event = 'VeryLazy',
     dependencies = {
       'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
-      'hrsh7th/cmp-buffer',
-      'hrsh7th/cmp-vsnip',
-      'hrsh7th/vim-vsnip',
     },
     config = function()
       require('plugins.cmp')
@@ -107,6 +103,15 @@ local lazy_plugins = {
     event = 'VeryLazy',
     config = function()
       require('plugins.lualine')
+    end,
+  },
+
+  {
+    'L3MON4D3/LuaSnip',
+    version = 'v2.*',
+    event = 'VeryLazy',
+    config = function()
+      require('plugins.luasnip')
     end,
   },
 
