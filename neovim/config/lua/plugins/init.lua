@@ -117,6 +117,7 @@ local lazy_plugins = {
     version = 'v2.*',
     event = 'VeryLazy',
     config = function()
+      ---@diagnostic disable: different-requires
       require('plugins.luasnip')
     end,
   },
@@ -159,6 +160,15 @@ local lazy_plugins = {
     build = ':TSUpdate',
     config = function()
       require('plugins.treesitter')
+    end,
+  },
+
+  {
+    'folke/trouble.nvim',
+    event = 'VeryLazy',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require('plugins.trouble')
     end,
   },
 }

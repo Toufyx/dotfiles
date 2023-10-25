@@ -16,3 +16,8 @@ keymap.set('n', '<leader>fh', telescope.help_tags, {})
 
 -- lsp key bindings
 keymap.set('n', 'gd', lsp.buf.definition, {})
+
+-- trouble key bindings
+---@diagnostic disable: different-requires
+local trouble = require('trouble')
+keymap.set('n', '<leader>xx', trouble.toggle, {})
