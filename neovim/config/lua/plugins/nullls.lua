@@ -32,6 +32,7 @@ local sources = {
   -- python
   builtins.formatting.isort,
   builtins.formatting.black,
+  builtins.diagnostics.flake8,
 }
 
 null_ls.setup({

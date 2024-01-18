@@ -35,11 +35,6 @@ PROMPT='$NEWLINE%F{000}%K{003} %T %k%F{003}%F{010}%F{000}%K{010} %~ %k%F{0
 # make sure things are pretty
 export CLICOLOR=1
 
-# simple key bindings to make alt-arrow work as expected
-bindkey -e
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
-
 # use nvim as default EDITOR
 export EDITOR=nvim
 
@@ -59,4 +54,3 @@ antigen bundle dotenv
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
-
