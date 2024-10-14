@@ -1,14 +1,37 @@
-[[language]]
-name = "python"
-auto-format = true
-formatter = { command = "sh", args = ["-c", "black --quiet - | isort -"]}
-language-server = { command = "pylsp-helix" }
-config = { "pylsp" = {"plugins" = {"pylint" = {"enabled" = true}}}}
+[language-server.tailwindcss]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+
+[language-server.pylsp]
+command = "pylsp-helix"
+
+[language-server.pylsp.config.pylsp.plugins]
+flake8 = {enabled = true, ignore = ["E501"]}
+autopep8 = {enabled = false}
+mccabe = {enabled = false}
+pycodestyle = {enabled = false}
+pyflakes = {enabled = false}
+pylint = {enabled = true}
+yapf = {enabled = false}
+ruff = { enabled = false}
+mypy = { enabled = true }
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config]
+inlayHints.bindingModeHints.enable = false
+inlayHints.closingBraceHints.minLines = 10
+inlayHints.closureReturnTypeHints.enable = "with_block"
+inlayHints.discriminantHints.enable = "fieldless"
+inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+inlayHints.typeHints.hideClosureInitialization = false
 
 [[language]]
 name = "html"
 auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "html"] }
+language-servers = [ "tailwindcss", "vscode-html-language-server", "emmet-ls" ]
 
 [[language]]
 name = "json"
@@ -16,11 +39,33 @@ auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "json"] }
 
 [[language]]
+name = "yaml"
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "yaml"] }
+
+[[language]]
 name = "css"
 auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "css"] }
+language-servers = [ "vscode-css-language-server" ]
 
 [[language]]
 name = "javascript"
 auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+
+[[language]]
+name = "rust"
+formatter = { command = "rustfmt", args = [ "+nightly", "--edition", "2021" ] }
+auto-format = true
+roots = [
+  "Cargo.toml",
+  "Cargo.lock"
+]
+
+[[language]]
+name = "python"
+auto-format = true
+formatter = { command = "sh", args = ["-c", "black --quiet - | isort -"]}
+language-servers = [ "pylsp" ]
+
