@@ -1,0 +1,82 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette
+{
+  "features": {
+    "inline_completion_provider": "none"
+  },
+  "buffer_font_family": "MonoLisa",
+  "buffer_font_size": 13,
+  "format_on_save": "on",
+  "ensure_final_newline_on_save": false,
+  "languages": {
+    "Python": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "sh",
+          "arguments": ["-e", "-o", "pipefail", "-c", "black - | isort -"]
+        }
+      },
+      "language_servers": ["pyright", "pylsp"]
+    }
+  },
+  "telemetry": {
+    "metrics": false
+  },
+  "terminal": {
+    "font_family": "MonoLisa",
+    "font_size": 13,
+    "env": {
+      "ZED": "1"
+    }
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Raven",
+    "dark": "Raven"
+  },
+  "ui_font_size": 16,
+  "lsp": {
+    "yaml-language-server": {},
+    "pyright": {
+      "settings": {
+        "python": {
+          "pythonPath": ".venv/bin/python"
+        }
+      }
+    },
+    "pylsp": {
+      "settings": {
+        "plugins": {
+          "flake8": {
+            "enabled": true
+          },
+          "black": {
+            "enabled": true
+          },
+          "pylint": {
+            "enabled": true
+          },
+          "pylsp_mypy": {
+            "enabled": true
+          },
+          "pyflakes": {
+            "enabled": false
+          },
+          "pycodestyle": {
+            "enabled": false
+          },
+          "mccabe": {
+            "enabled": false
+          }
+        }
+      }
+    }
+  }
+}
