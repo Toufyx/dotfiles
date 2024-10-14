@@ -42,17 +42,17 @@ scrolling:
 font:
   # Font faces
   normal:
-    family: FiraMono Nerd Font Propo
-    style: Regular
+    family: MonoLisa
+    style: Book
   bold:
-    family: FiraMono Nerd Font Propo
-    style: Semibold
+    family: MonoLisa
+    style: Medium
   italic:
-    family: FiraMono Nerd Font Propo
-    style: Light Italic
+    family: MonoLisa
+    style: BookItalic
   bold_italic:
-    family: FiraMono Nerd Font Propo
-    style: Italic
+    family: MonoLisa
+    style: MediumItalic
   # Point size
   size: 14
   # Offset is the extra space around each character. `offset.y` can be thought
@@ -60,13 +60,13 @@ font:
   # spacing.
   offset:
     x: 0
-    y: 1
+    y: 0
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
   # right, increasing `y` moves the glyph upward.
   glyph_offset:
     x: 0
-    y: 1
+    y: 2
   # Thin strokes are suitable for retina displays, but for non-retina screens
   # it is recommended to set `use_thin_strokes` to `false`.
   use_thin_strokes: true
@@ -93,7 +93,7 @@ bell:
   # disable the visual bell animation.
   duration: 100
   # Visual bell animation color.
-  color: '#3c3638'
+  color: "#3c3638"
 selection:
   # This string contains all characters that are used as separators for
   # "semantic words" in Alacritty.
