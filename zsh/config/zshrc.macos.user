@@ -9,9 +9,14 @@
 # set up unicode
 export LANG=en_US.UTF-8
 
-# load personal and python tools
-export PATH="$PATH:/usr/local/bin:$HOME/Workspace/bin"
+# define some aliases
+alias ssh='TERM=xterm-256color ssh'
+alias zed="open -a /Applications/Zed.app"
+
+# load additional tools
+export PATH="$HOME/Workspace/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 # configure pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -27,10 +32,15 @@ autoload -U colors && colors
 RESET="%f%k"
 NEWLINE=$'\n'
 git_branch() {
-    branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/')
-    [[ -z "$branch" ]] || echo "%F{004}%F{000}%K{004} $branch %F{004}%k%f%k"
+    branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+    [[ -z "$branch" ]] || echo "%F{039}%K{28}%F{038}%K{004} $branch %F{004}%k%f%k"
 }
-PROMPT='$NEWLINE%F{000}%K{003} %T %k%F{003}%F{010}%F{000}%K{010} %~ %k%F{010}$(git_branch)$RESET$NEWLINE$NEWLINE$ '
+
+if [[ "$VSCODE" == "1" || "$ZED" == "1" ]]; then
+    PROMPT='%~ %F{007}❱ %f%k'
+else
+    PROMPT='$NEWLINE%F{038}%K{022} %T %F{022}%K{039}%F{039}%K{023}%F{038}%K{023} %~ %K{039}%F{023}$(git_branch)%f%k$NEWLINE$NEWLINE$ '
+fi
 
 # make sure things are pretty
 export CLICOLOR=1
@@ -54,3 +64,7 @@ antigen bundle dotenv
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
+
+# setup direnv hook
+export DIRENV_LOG_FORMAT=""
+eval "$(direnv hook zsh)"
