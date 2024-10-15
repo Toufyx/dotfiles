@@ -1,0 +1,75 @@
+import = ["/Users/thibault.defeyter/.config/alacritty/catppuccin.toml", "/Users/thibault.defeyter/.config/alacritty/bindings.toml"]
+
+[bell]
+animation = "Ease"
+color = "#3c3638"
+duration = 100
+
+[cursor.style]
+shape = "Block"
+
+[env]
+TERM = "alacritty"
+
+[font]
+builtin_box_drawing = true
+size = 14
+
+[font.bold]
+family = "MonoLisa"
+style = "Medium"
+
+[font.bold_italic]
+family = "MonoLisa"
+style = "MediumItalic"
+
+[font.glyph_offset]
+x = 0
+y = 2
+
+[font.italic]
+family = "MonoLisa"
+style = "BookItalic"
+
+[font.normal]
+family = "MonoLisa"
+style = "Book"
+
+[font.offset]
+x = 0
+y = 0
+
+[[hints.enabled]]
+command = "open"
+post_processing = true
+regex = '(https:|http:)[^\s]+'
+
+[hints.enabled.mouse]
+enabled = true
+mods = "Command"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[window]
+option_as_alt = "none"
+decorations = "buttonless"
+dynamic_padding = true
+opacity = 1
+
+[window.dimensions]
+columns = 178
+lines = 48
+
+[window.padding]
+x = 8
+y = 8
+
+[window.position]
+x = 30
+y = 102
