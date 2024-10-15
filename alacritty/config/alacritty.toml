@@ -1,4 +1,4 @@
-import = ["/Users/thibault.defeyter/.config/alacritty/catppuccin.toml", "/Users/thibault.defeyter/.config/alacritty/bindings.toml"]
+import = ["~/.config/alacritty/catppuccin.toml", "~/.config/alacritty/bindings.toml"]
 
 [bell]
 animation = "Ease"
